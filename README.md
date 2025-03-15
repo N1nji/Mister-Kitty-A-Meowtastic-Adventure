@@ -16,8 +16,8 @@ Em meio a muitos desafios e aventuras, você vai ajudar nosso protagonista a sup
   - Mobile:
     - Botões virtuais para se mover para esquerda, direita e pular e toque para interagir
 
-🛠️ Tecnologias utilizadas
-Engine: Godot 4.4
+## 🛠️ Tecnologias utilizadas
+Engine: Godot 4.4  
 Linguagem: GDScript
 
 ## 📝 Lore
