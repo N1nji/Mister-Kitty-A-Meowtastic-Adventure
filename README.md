@@ -16,6 +16,10 @@ Em meio a muitos desafios e aventuras, você vai ajudar nosso protagonista a sup
   - Mobile:
     - Botões virtuais para se mover para esquerda, direita e pular e toque para interagir
 
+🛠️ Tecnologias utilizadas
+Engine: Godot 4.4
+Linguagem: GDScript
+
 ## 📝 Lore
 
 Você é o Mr. Kitty, um gatinho perdido tentando voltar para casa. Sua dona, uma idosa fanática por gatos, 
