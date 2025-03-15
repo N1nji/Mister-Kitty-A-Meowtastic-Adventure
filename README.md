@@ -23,7 +23,7 @@ está esperando por você, mas o caminho está cheio de obstáculos! Você preci
 
 ## 📜 Autores
 
-Criado por [N1nji] - [https://www.linkedin.com/in/pedro-felipe-9b97b315b/].
+Criado por [N1nji] - [https://www.linkedin.com/in/pedro-felipe-9b97b315b/] & [https://www.tiktok.com/@mr.kitty_game]
 
 Designer por [Sh1zi] - [https://www.tiktok.com/@kootyoder].
 
