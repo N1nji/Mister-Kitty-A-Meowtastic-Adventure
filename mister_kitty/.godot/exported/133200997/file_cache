@@ -1,0 +1,8 @@
+res://actors/enemy.tscn::2470f6b63ed754a74947c688ac784a47::1739284612::res://.godot/exported/133200997/export-61e27e8a0642b62a00179865da5b591c-enemy.scn
+res://actors/mister_kitty.tscn::a3be0546589fd9de29c513e7040002fc::1739284612::res://.godot/exported/133200997/export-a80b7716e63c63b3afbc8b369599cce2-mister_kitty.scn
+res://levels/world_01.tscn::c6b9873b78ad6700928d2b3b4d8d43e9::1739284631::res://.godot/exported/133200997/export-bde9b0b2529c5f41f8c8416b7a30fd64-world_01.scn
+res://prefabs/box_pieces.tscn::f02628fb9331980ec8964d78ea3219ef::1739284613::res://.godot/exported/133200997/export-d088e30657af1788143c74091958b18d-box_pieces.scn
+res://prefabs/break_box.tscn::3cf3c696427ea58b47787974c4bcef71::1739284613::res://.godot/exported/133200997/export-2f9be4c863036b3a1d8f6a066dbc3422-break_box.scn
+res://prefabs/coin.tscn::7efa8111915ef1d18cdbe07b30808076::1739284612::res://.godot/exported/133200997/export-39bbc9b86d6ff472dbd608d74c2b3efc-coin.scn
+res://prefabs/hitbox.tscn::885c9a0e9b7499b4db7ac620fdd1b0a6::1738900203::res://.godot/exported/133200997/export-5e61a6088dbfe8a801584a03fb1f0aa8-hitbox.scn
+res://prefabs/moving_platform.tscn::7348e0de823ac08d5a397407260694f1::1739284612::res://.godot/exported/133200997/export-b8b4dc3182f88a6c2aaba450ed03da50-moving_platform.scn

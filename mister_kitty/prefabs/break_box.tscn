@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://bctlrosiosus2"]
+
+[ext_resource type="Script" path="res://scripts/break_box.gd" id="1_6uwgf"]
+[ext_resource type="Texture2D" uid="uid://ixcw80mrc6rr" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/6 - Box/caixa inteira.png" id="1_ag4cs"]
+[ext_resource type="Shader" path="res://hit_flash.gdshader" id="2_qccof"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lieor"]
+shader = ExtResource("2_qccof")
+shader_parameter/active = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hw502"]
+size = Vector2(29, 29)
+
+[sub_resource type="Animation" id="Animation_8vs13"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:material:shader_parameter/active")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_4ye1x"]
+resource_name = "hit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.5), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1ylfo"]
+_data = {
+"RESET": SubResource("Animation_8vs13"),
+"hit": SubResource("Animation_4ye1x")
+}
+
+[node name="break-box" type="CharacterBody2D"]
+disable_mode = 2
+collision_layer = 64
+collision_mask = 0
+slide_on_ceiling = false
+script = ExtResource("1_6uwgf")
+pieces = PackedStringArray("res://assets/Seasonal Tilesets/Seasonal Tilesets/6 - Box/pedaço-1.png", "res://assets/Seasonal Tilesets/Seasonal Tilesets/6 - Box/pedaço-2.png", "res://assets/Seasonal Tilesets/Seasonal Tilesets/6 - Box/pedaço-3.png", "res://assets/Seasonal Tilesets/Seasonal Tilesets/6 - Box/pedaço-4.png", "res://assets/Seasonal Tilesets/Seasonal Tilesets/6 - Box/pedaço-5.png")
+
+[node name="texture" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_lieor")
+position = Vector2(-16, -17)
+texture = ExtResource("1_ag4cs")
+centered = false
+
+[node name="collisionbox" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_hw502")
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1ylfo")
+}
+
+[node name="spawn_coin" type="Marker2D" parent="."]
+z_as_relative = false
+position = Vector2(0, -15)

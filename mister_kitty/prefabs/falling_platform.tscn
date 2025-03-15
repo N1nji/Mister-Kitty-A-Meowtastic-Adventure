@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://iv1pe33sp2sv"]
+
+[ext_resource type="Script" path="res://scripts/falling_platform.gd" id="1_vi7l5"]
+[ext_resource type="Texture2D" uid="uid://csgqjv4te5cbw" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/7 - Falling_Platform/falling_platform.png" id="2_3n3ye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8e7l"]
+size = Vector2(40, 14.75)
+
+[sub_resource type="Animation" id="Animation_ih3ab"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_63tun"]
+resource_name = "shake"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(2, 0), Vector2(0, 0), Vector2(-2, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pdnpm"]
+_data = {
+"RESET": SubResource("Animation_ih3ab"),
+"shake": SubResource("Animation_63tun")
+}
+
+[node name="falling_platform" type="AnimatableBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_vi7l5")
+
+[node name="texture" type="Sprite2D" parent="."]
+texture = ExtResource("2_3n3ye")
+region_rect = Rect2(64, 48, 16, 32)
+
+[node name="collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -0.375)
+shape = SubResource("RectangleShape2D_t8e7l")
+one_way_collision = true
+
+[node name="respawn_timer" type="Timer" parent="."]
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pdnpm")
+}
+
+[connection signal="timeout" from="respawn_timer" to="." method="_on_respawn_timer_timeout"]
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

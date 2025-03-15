@@ -1,0 +1,14 @@
+CollisionShape2D
+Marker2D
+RigidBody2D
+Sprite2D
+Node2D
+Area2D
+Button
+NinePatchRect
+TextureRect
+CanvasLayer
+Timer
+Label
+MarginContainer
+AnimationPlayer

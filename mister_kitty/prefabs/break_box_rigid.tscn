@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d12flilq5fkre"]
+
+[ext_resource type="PackedScene" uid="uid://bctlrosiosus2" path="res://prefabs/break_box.tscn" id="1_va4og"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wy556"]
+size = Vector2(27, 27)
+
+[node name="break_box_rigid" type="RigidBody2D"]
+collision_layer = 64
+collision_mask = 2
+
+[node name="break-box" parent="." instance=ExtResource("1_va4og")]
+
+[node name="colllision" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_wy556")
