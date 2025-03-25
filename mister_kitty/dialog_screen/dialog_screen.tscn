@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsmbcry8hrolp"]
+
+[ext_resource type="Script" uid="uid://cf3v1iictrepo" path="res://dialog_screen/dialog_screen.gd" id="1_3i3i5"]
+[ext_resource type="FontFile" uid="uid://cggqf1ru5nfme" path="res://assets/Fonts/RevMiniPixel.ttf" id="2_3i3i5"]
+[ext_resource type="Texture2D" uid="uid://ctalje6b7bfxi" path="res://dialog_screen_facesets/chat_icon_sun_cat3.png" id="2_151ks"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_151ks"]
+line_spacing = 0.0
+font = ExtResource("2_3i3i5")
+shadow_color = Color(0, 0, 0, 0.6)
+
+[node name="dialog_screen" type="Control" node_paths=PackedStringArray("_name", "_dialog", "_faceset")]
+custom_minimum_size = Vector2(320, 80)
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -322.0
+offset_top = -175.0
+offset_right = -2.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(2, 2)
+script = ExtResource("1_3i3i5")
+_name = NodePath("hcontainer/vcontainer/name")
+_dialog = NodePath("hcontainer/vcontainer/dialog")
+_faceset = NodePath("hcontainer/border/faceset")
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="hcontainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(312, 72)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -36.0
+offset_right = 156.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="border" type="ColorRect" parent="hcontainer"]
+custom_minimum_size = Vector2(72, 0)
+layout_mode = 2
+
+[node name="faceset" type="TextureRect" parent="hcontainer/border"]
+custom_minimum_size = Vector2(70, 72)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -36.0
+offset_right = 35.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_151ks")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="vcontainer" type="VBoxContainer" parent="hcontainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="name" type="Label" parent="hcontainer/vcontainer"]
+layout_mode = 2
+text = "Cat Sun"
+label_settings = SubResource("LabelSettings_151ks")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="dialog" type="RichTextLabel" parent="hcontainer/vcontainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_fonts/normal_font = ExtResource("2_3i3i5")

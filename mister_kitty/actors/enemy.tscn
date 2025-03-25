@@ -1,17 +1,20 @@
-[gd_scene load_steps=13 format=3 uid="uid://udhd3togk37m"]
+[gd_scene load_steps=14 format=3 uid="uid://udhd3togk37m"]
 
-[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_q0ct1"]
-[ext_resource type="Texture2D" uid="uid://dqabq7sllvvkb" path="res://assets/Sprite Pack 2/Sprite Pack 2/10 - Dog/Walk.png" id="1_xyqvg"]
-[ext_resource type="Texture2D" uid="uid://nj26yo46fg4s" path="res://assets/Sprite Pack 2/Sprite Pack 2/10 - Dog/Hurt.png" id="3_42my5"]
+[ext_resource type="Script" uid="uid://0hjfyw1qcc8s" path="res://scripts/enemy.gd" id="1_q0ct1"]
+[ext_resource type="Texture2D" uid="uid://dcfrkl8mucgj0" path="res://assets/Sprite Pack 2/Sprite Pack 2/Wolf/new_wolf_dano.png" id="3_6tp0m"]
+[ext_resource type="Texture2D" uid="uid://v3loc0anqosw" path="res://assets/Sprite Pack 2/Sprite Pack 2/Wolf/new_wolf_inative.png" id="4_6tp0m"]
 [ext_resource type="PackedScene" uid="uid://bb2edu262on2c" path="res://prefabs/hitbox.tscn" id="4_ie2ic"]
-[ext_resource type="Texture2D" uid="uid://ctcbue874oq1k" path="res://assets/Sprite Pack 2/Sprite Pack 2/10 - Dog/Idle.png" id="4_lrdmw"]
+[ext_resource type="Texture2D" uid="uid://cef1rrf2v2h5l" path="res://assets/Sprite Pack 2/Sprite Pack 2/Wolf/new_wolf_walk.png" id="5_kho5t"]
+[ext_resource type="Texture2D" uid="uid://d34rhlqbevthj" path="res://assets/Sprite Pack 2/Sprite Pack 2/Wolf/new_wolf_morte.png" id="6_kho5t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47v8y"]
 radius = 9.0
 height = 18.0
 
-[sub_resource type="Animation" id="Animation_ggeot"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_6tp0m"]
+resource_name = "death"
+length = 0.13
+step = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -22,7 +25,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_xyqvg")]
+"values": [ExtResource("6_kho5t")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -34,7 +37,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [6]
+"values": [4]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -43,15 +46,15 @@ tracks/2/path = NodePath("texture:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.0326916, 0.0691845, 0.105677),
+"transitions": PackedFloat32Array(4, 4, 4, 4),
 "update": 1,
-"values": [0]
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_x1bp0"]
 resource_name = "hurt"
-length = 0.2
+length = 0.0639
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -62,7 +65,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_42my5")]
+"values": [ExtResource("3_6tp0m")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -91,8 +94,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_vjfss"]
 resource_name = "idle"
-length = 0.2
-loop_mode = 1
+length = 0.13
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -103,7 +105,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_lrdmw")]
+"values": [ExtResource("4_6tp0m")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -124,16 +126,17 @@ tracks/2/path = NodePath("texture:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0333333),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [0, 1]
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="Animation" id="Animation_nx4xy"]
 resource_name = "walk"
-length = 0.2
+length = 0.13
 loop_mode = 1
+step = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -144,7 +147,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_xyqvg")]
+"values": [ExtResource("5_kho5t")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -156,7 +159,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [6]
+"values": [4]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -165,18 +168,18 @@ tracks/2/path = NodePath("texture:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1),
+"transitions": PackedFloat32Array(5.09824, 5.09824, 5.09824, 5.09824),
 "update": 1,
-"values": [0, 1, 2, 3, 4]
+"values": [0, 1, 2, 3]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bktsh"]
 _data = {
-"RESET": SubResource("Animation_ggeot"),
-"hurt": SubResource("Animation_x1bp0"),
-"idle": SubResource("Animation_vjfss"),
-"walk": SubResource("Animation_nx4xy")
+&"death": SubResource("Animation_6tp0m"),
+&"hurt": SubResource("Animation_x1bp0"),
+&"idle": SubResource("Animation_vjfss"),
+&"walk": SubResource("Animation_nx4xy")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w224w"]
@@ -189,10 +192,10 @@ collision_mask = 34
 script = ExtResource("1_q0ct1")
 
 [node name="texture" type="Sprite2D" parent="."]
-position = Vector2(1, 0)
-texture = ExtResource("1_xyqvg")
+position = Vector2(6, 6)
+texture = ExtResource("5_kho5t")
 flip_h = true
-hframes = 6
+hframes = 4
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(6, 15)
@@ -200,10 +203,10 @@ shape = SubResource("CapsuleShape2D_47v8y")
 
 [node name="anim" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_bktsh")
+&"": SubResource("AnimationLibrary_bktsh")
 }
 autoplay = "walk"
-speed_scale = 0.5
+speed_scale = 0.3
 
 [node name="wall_detector" type="RayCast2D" parent="."]
 position = Vector2(1, 10)

@@ -1,15 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bngyjmjocs82s"]
+[gd_scene load_steps=2 format=3 uid="uid://c7sw52n1ffttk"]
 
-[ext_resource type="Script" path="res://scripts/box_pieces.gd" id="1_he6j1"]
+[ext_resource type="Script" uid="uid://3bupmwioc0yg" path="res://scripts/box_pieces.gd" id="1_li7nh"]
 
-[node name="box-pieces" type="RigidBody2D"]
-collision_layer = 0
-collision_mask = 3
-continuous_cd = 1
-script = ExtResource("1_he6j1")
+[node name="box_pieces" type="RigidBody2D"]
+script = ExtResource("1_li7nh")
 
 [node name="texture" type="Sprite2D" parent="."]
-region_rect = Rect2(-224, -88, 172, 128)
 
 [node name="notifier" type="VisibleOnScreenNotifier2D" parent="."]
 

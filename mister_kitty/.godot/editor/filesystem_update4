@@ -1,0 +1,16 @@
+res://shaders/movements_clouds.gdshader
+res://levels/world_01.tscn
+res://actors/mister_kitty.tscn
+res://prefabs/moving_platform.tscn
+res://prefabs/coin.tscn
+res://actors/enemy.tscn
+res://prefabs/break_box.tscn
+res://prefabs/coin_rigid.tscn
+res://prefabs/falling_platform.tscn
+res://prefabs/dialog_box.tscn
+res://prefabs/box_pieces.tscn
+res://prefabs/cat_box.tscn
+res://prefabs/coin_no_shadow.tscn
+res://prefabs/sun.tscn
+res://dialog_screen/dialog_screen.tscn
+res://title_screen/title_screen.tscn

@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://bctlrosiosus2"]
 
-[ext_resource type="Script" path="res://scripts/break_box.gd" id="1_6uwgf"]
+[ext_resource type="Script" uid="uid://e7ttefx3lhs5" path="res://scripts/break_box.gd" id="1_6uwgf"]
 [ext_resource type="Texture2D" uid="uid://ixcw80mrc6rr" path="res://assets/Seasonal Tilesets/Seasonal Tilesets/6 - Box/caixa inteira.png" id="1_ag4cs"]
-[ext_resource type="Shader" path="res://hit_flash.gdshader" id="2_qccof"]
+[ext_resource type="Shader" uid="uid://dfjk8u262eabu" path="res://hit_flash.gdshader" id="2_qccof"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lieor"]
 shader = ExtResource("2_qccof")
@@ -68,8 +68,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1ylfo"]
 _data = {
-"RESET": SubResource("Animation_8vs13"),
-"hit": SubResource("Animation_4ye1x")
+&"RESET": SubResource("Animation_8vs13"),
+&"hit": SubResource("Animation_4ye1x")
 }
 
 [node name="break-box" type="CharacterBody2D"]
@@ -92,7 +92,7 @@ shape = SubResource("RectangleShape2D_hw502")
 
 [node name="anim" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_1ylfo")
+&"": SubResource("AnimationLibrary_1ylfo")
 }
 
 [node name="spawn_coin" type="Marker2D" parent="."]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://63v8ckqg71ep"]
 
-[ext_resource type="Script" path="res://scripts/coin.gd" id="1_awui8"]
+[ext_resource type="Script" uid="uid://c5jql7k8u6kg7" path="res://scripts/coin.gd" id="1_awui8"]
 [ext_resource type="Texture2D" uid="uid://c64ms3u7y1gf0" path="res://assets/Mini FX, Items & UI/Mini FX, Items & UI/Effects/Yellow_Sparkle (16 x 16).png" id="2_2c0ec"]
 [ext_resource type="Texture2D" uid="uid://u6vf7mfobebk" path="res://assets/Mini FX, Items & UI/Mini FX, Items & UI/fish coin_update/fish_coin_redesign.png" id="3_x7s0k"]
 
@@ -81,7 +81,7 @@ script = ExtResource("1_awui8")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_e0tbf")
-animation = &"idle"
+animation = &"collect"
 autoplay = "idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]

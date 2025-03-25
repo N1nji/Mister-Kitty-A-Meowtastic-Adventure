@@ -1,6 +1,6 @@
 [gd_scene load_steps=51 format=3 uid="uid://bb5fsq7dr1xpi"]
 
-[ext_resource type="Script" path="res://scripts/mister_kitty.gd" id="1_qir5i"]
+[ext_resource type="Script" uid="uid://jr1xdf1era55" path="res://scripts/mister_kitty.gd" id="1_qir5i"]
 [ext_resource type="Texture2D" uid="uid://3itof713fh0y" path="res://assets/Sprite Pack 2/Sprite Pack 2/2 - Mr. Kitty/mister_kitty_morte.png" id="2_835c4"]
 [ext_resource type="Texture2D" uid="uid://cuunindxv7ucq" path="res://assets/Sprite Pack 2/Sprite Pack 2/2 - Mr. Kitty/mister_kitty_idle.png" id="2_pnmko"]
 [ext_resource type="Texture2D" uid="uid://s2qqfn8yyqgg" path="res://assets/Sprite Pack 2/Sprite Pack 2/2 - Mr. Kitty/mister_kitty_dano.png" id="2_tki8v"]
@@ -324,14 +324,14 @@ size = Vector2(14, 14.5)
 size = Vector2(14.5, 4)
 
 [node name="mister_kitty" type="CharacterBody2D"]
-position = Vector2(0, -7)
+position = Vector2(-1, -8)
 collision_mask = 94
 script = ExtResource("1_qir5i")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_rx73c")
-animation = &"death"
+animation = &"run"
 autoplay = "idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]
@@ -364,7 +364,8 @@ target_position = Vector2(-6, 0)
 collision_mask = 4
 
 [node name="head_collider" type="Area2D" parent="."]
-collision_mask = 64
+collision_layer = 0
+collision_mask = 65
 
 [node name="head_collision" type="CollisionShape2D" parent="head_collider"]
 position = Vector2(1.75, -17)

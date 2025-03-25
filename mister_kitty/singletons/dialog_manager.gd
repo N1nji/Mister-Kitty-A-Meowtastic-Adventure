@@ -59,6 +59,7 @@ func _on_area_sign_exited(_body: Node) -> void:
 	if is_message_active:
 		is_message_active = false
 		current_line = 0
+		can_advance_message = false
 		if dialog_box and is_instance_valid(dialog_box):
 			dialog_box.call_deferred("queue_free")
 			dialog_box = null
