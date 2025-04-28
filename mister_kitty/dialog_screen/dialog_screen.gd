@@ -16,6 +16,7 @@ var is_in_area = false
 func _ready() -> void:
 	_initialize_dialog()
 
+
 func _process(_delta: float) -> void:
 	# Se o jogador pressiona "O" (advance_message)
 	if Input.is_action_just_pressed("advance_message"):
@@ -25,7 +26,7 @@ func _process(_delta: float) -> void:
 			# Mostra o texto todo de uma vez se ainda estiver aparecendo
 			_dialog.visible_characters = _dialog.text.length()
 			is_text_displayed = true
-
+ 
 func _initialize_dialog() -> void:
 	# Carrega os dados do diálogo atual
 	_name.text = data[_id]["title"]

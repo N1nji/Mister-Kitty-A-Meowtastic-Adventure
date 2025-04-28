@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://b66coiwmekj5l"]
+
+[ext_resource type="Script" uid="uid://5n2yhbqatg3s" path="res://scripts/cloudbig.gd" id="1_2n8dn"]
+[ext_resource type="Shader" uid="uid://ddssi62x6hnsc" path="res://shaders/cloudbig.gdshader" id="1_jjxt2"]
+[ext_resource type="Texture2D" uid="uid://p6bv2sjgdrsc" path="res://assets/Sprite Pack 2/Sprite Pack 2/Cloud Dog/nuvem_roxa_maior.png" id="1_pvrr6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jjxt2"]
+shader = ExtResource("1_jjxt2")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2n8dn"]
+size = Vector2(8.99951, 31.9961)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rjqj5"]
+
+[node name="cloudbig" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_2n8dn")
+
+[node name="texture" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_jjxt2")
+texture = ExtResource("1_pvrr6")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0.0549645, 3.49883)
+rotation = 1.55509
+shape = SubResource("RectangleShape2D_2n8dn")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 20
+gravity = Vector2(0, 0)
+
+[node name="area" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="collision" type="CollisionShape2D" parent="area"]
+visible = false
+position = Vector2(0, -8)
+rotation = 1.55334
+shape = SubResource("CapsuleShape2D_rjqj5")

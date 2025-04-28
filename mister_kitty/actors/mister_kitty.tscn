@@ -325,14 +325,16 @@ size = Vector2(14.5, 4)
 
 [node name="mister_kitty" type="CharacterBody2D"]
 position = Vector2(-1, -8)
-collision_mask = 94
+collision_mask = 222
 script = ExtResource("1_qir5i")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_rx73c")
-animation = &"run"
+animation = &"death"
 autoplay = "idle"
+frame = 10
+frame_progress = 1.0
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, -1)
@@ -352,16 +354,6 @@ debug_color = Color(0.971659, 0, 0.446437, 0.42)
 
 [node name="remote" type="RemoteTransform2D" parent="."]
 position = Vector2(2, -4)
-
-[node name="ray_right" type="RayCast2D" parent="."]
-position = Vector2(5, -4)
-target_position = Vector2(6, 0)
-collision_mask = 4
-
-[node name="ray_left" type="RayCast2D" parent="."]
-position = Vector2(-3, -4)
-target_position = Vector2(-6, 0)
-collision_mask = 4
 
 [node name="head_collider" type="Area2D" parent="."]
 collision_layer = 0

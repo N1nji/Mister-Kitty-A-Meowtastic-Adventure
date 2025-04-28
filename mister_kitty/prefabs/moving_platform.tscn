@@ -8,6 +8,7 @@ size = Vector2(32, 16)
 
 [node name="moving_platform" type="Node2D"]
 script = ExtResource("1_unm7d")
+distance = 220
 
 [node name="platform" type="AnimatableBody2D" parent="."]
 collision_layer = 2

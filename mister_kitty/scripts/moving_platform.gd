@@ -4,7 +4,7 @@ const WAIT_DURATION := 1.0
 
 @onready var platform := $platform as AnimatableBody2D
 @export var move_speed := 3.0
-@export var distance := 192
+@export var distance := 200
 @export var move_horizontal := true
 
 var follow := Vector2.ZERO

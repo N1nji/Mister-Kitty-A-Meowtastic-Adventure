@@ -14,22 +14,30 @@ func _ready() -> void:
 	anim.play("raio")
 
 func _process(delta):
+	if is_area_sun and !is_interacting:
+		texture.show()
+		
+	if Input.is_action_pressed("interact") and is_area_sun and !is_interacting:
+		texture.hide()
+		follow_player = true
+		is_interacting = true
+	
 	if follow_player and mister_kitty:
 		var target_position = mister_kitty.position + offset  # Define a posição alvo com base no player
 		position = position.lerp(target_position, follow_speed * delta)  # Movimenta suavemente
-	if Input.is_action_pressed("advance_message") or Input.is_action_pressed("interact"):
+	if Input.is_action_pressed("advance_message") or Input.is_action_pressed("interact") or Input.is_action_pressed("ui_touch"):
 		texture.hide()
 
 
 func _on_area_sun_body_entered(body: Node2D) -> void:
 		texture.show()
-		if Input.is_action_pressed("advance_message") or Input.is_action_pressed("interact"):
+		if Input.is_action_pressed("advance_message") or Input.is_action_pressed("interact") or Input.is_action_pressed("ui_touch"):
 			texture.hide()
 			is_interacting = true
-	
 
 
 func _on_area_sun_body_exited(body: Node2D) -> void:
+	if Input.is_action_pressed("interact") or Input.is_action_pressed("advance_message") or Input.is_action_pressed("ui_touch") and is_area_sun and !is_interacting:
 			follow_player = true
+			is_interacting = false
 			texture.hide()
-			

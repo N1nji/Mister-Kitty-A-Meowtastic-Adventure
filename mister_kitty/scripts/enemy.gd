@@ -31,10 +31,6 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-
-
-
- 
 func _on_anim_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "death":
 		queue_free()

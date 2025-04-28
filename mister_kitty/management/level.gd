@@ -22,7 +22,7 @@ var _dialog_data: Dictionary = {
 
 	2: {
 		"faceset": "res://dialog_screen_facesets/chat_icon_sun_cat3.png",
-		"dialog": "E a rsposta para isso é... eu e a lua trocamos de turno!",
+		"dialog": "E a resposta para isso é... eu e a lua trocamos de turno!",
 		"title": "Cat Sun"
 	},
 	
@@ -41,7 +41,7 @@ var _dialog_data: Dictionary = {
 
 var is_dialog_active: bool = false  # Flag para controlar se o diálogo já foi ativado
 
-
+# Func teste que não deu certo >:(
 #func _process(delta: float) -> void:
 	#if Input.is_action_just_pressed("interact") and !is_dialog_active:  # Ativa o diálogo com 'I' (interagir)
 		#is_dialog_active = true
@@ -61,10 +61,15 @@ func _input(event):
 	if player_in_area and event.is_action_pressed("interact"):
 		start_dialog()
 
+# Inicia o dialoog apenas se o player estiver na area
 func start_dialog():
 	var _new_dialog: dialogscreen = _DIALOG_SCREEN.instantiate()
 	_new_dialog.data = _dialog_data
 	_hud.add_child(_new_dialog)
+	
+	var sun = get_node_or_null("/root/World-01/BG/cat_sun/sun")
+	if sun:
+		sun.follow_player = true
 
 # Método chamado quando o player entra na área
 func _on_area_sun_body_entered(body):

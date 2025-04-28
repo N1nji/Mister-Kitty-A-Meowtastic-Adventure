@@ -1,44 +1,64 @@
 extends CharacterBody2D
 
 
-const SPEED = 170.0
-const JUMP_FORCE = -400.0
+const SPEED = 230.0
+const AIR_FRICTION := 0.7
 
-var gravity = 1000
+var time := 0.05
 var is_jumping := false
 var is_hurted := false
 var is_dead := false
 var mister_kitty_life := 7
 var knockback_vector := Vector2.ZERO
+var knockback_power := 20
 var direction
 
+#handle jump and gravity
+@export var jump_height := 100
+@export var max_time_to_peak := 0.5
+
+var jump_velocity
+var gravity
+var fall_gravity
 
 @onready var animation := $anim as AnimatedSprite2D
 @onready var remote_transform := $remote as RemoteTransform2D
 
+func _ready():
+	jump_velocity = (jump_height * 2) / max_time_to_peak
+	gravity = (jump_height * 2) / pow(max_time_to_peak, 2)
+	fall_gravity = gravity * 2
+	
 func _physics_process(delta: float) -> void:
 	#Impede o Player de se mover quando morrer (antes estava sendo possível andar enquanto a animação
 	#rodava
 	if is_dead:
+		print("Virou verdade")
 		velocity = Vector2.ZERO  # Para o movimento
 		return
 	
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity.x = 0
+		#velocity += get_gravity() * delta
 
 	
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_FORCE
+		velocity.y = -jump_velocity
 		is_jumping = true
 	elif is_on_floor():
 		is_jumping = false
+		
+	if velocity.y > 0 or not Input.is_action_pressed("ui_accept"):
+		velocity.y += fall_gravity * delta
+	else:
+		velocity.y += gravity * delta
 
 	# Obtém a direção do movimento com base nas teclas pressionadas (esquerda/direita)
 	direction = Input.get_axis("ui_left", "ui_right")
 	
 	# Se houver entrada (tecla pressionada), define a velocidade na direção escolhida
 	if direction != 0:
-		velocity.x = direction * SPEED # Ajusta a velocidade com base na direção
+		velocity.x = lerp(velocity.x, direction * SPEED, AIR_FRICTION) # Ajusta a velocidade com base na direção
 		animation.scale.x = direction # Espelha o sprite dependendo do lado que o personagem está indo
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -61,16 +81,17 @@ func _physics_process(delta: float) -> void:
 func _on_hurtbox_body_entered(body: Node2D) -> void:
 # if body.is_in_group("enemies"):
 		#queue_free()
-	if mister_kitty_life < 0:
+	if is_dead:
+		return
+		
+	if mister_kitty_life == 0:
 		is_dead = true
 		animation.play("death")
 		await animation.animation_finished
 		queue_free()
 	else:
-		if $ray_right.is_colliding():
-			take_damage(Vector2(-200, -200))
-		elif $ray_left.is_colliding():
-			take_damage(Vector2(200, -200))
+		var knockback = Vector2((global_position.x - body.global_position.x) * knockback_power, -200)
+		take_damage(knockback)
 			
 func follow_camera(camera):
 	var camera_path = camera.get_path()

@@ -1,117 +1,224 @@
-[gd_scene load_steps=16 format=3 uid="uid://bdvmhcrd2aer4"]
+[gd_scene load_steps=25 format=3 uid="uid://bdvmhcrd2aer4"]
 
-[ext_resource type="Texture2D" uid="uid://bca4enbqxf6nk" path="res://title_screen/house_animated.png" id="1_g2mvh"]
+[ext_resource type="Texture2D" uid="uid://d218tyxrk6yuu" path="res://title_screen/titlescreen - frames/house_animated.png" id="1_1oos5"]
+[ext_resource type="FontFile" uid="uid://cggqf1ru5nfme" path="res://assets/Fonts/RevMiniPixel.ttf" id="2_2dq6q"]
 [ext_resource type="Texture2D" uid="uid://i7h8sx0ys10o" path="res://title_screen/mk_letter.png" id="2_dxpbd"]
+[ext_resource type="Texture2D" uid="uid://ig4gahfvlagv" path="res://title_screen/titlescreen - frames/house_animated2.png" id="2_fh6ay"]
+[ext_resource type="Texture2D" uid="uid://bloedvx4ykqme" path="res://title_screen/titlescreen - frames/house_animated11.png" id="3_3d3o2"]
+[ext_resource type="Texture2D" uid="uid://b0277ujj4h5yd" path="res://title_screen/titlescreen - frames/house_animated3.png" id="3_jabur"]
+[ext_resource type="Theme" uid="uid://2cjsh85ughq4" path="res://title_screen/default_buttons.tres" id="3_vbjqi"]
+[ext_resource type="Texture2D" uid="uid://ccku08i2n64do" path="res://title_screen/titlescreen - frames/house_animated12.png" id="4_47vnn"]
+[ext_resource type="Texture2D" uid="uid://cmageqowa3p1q" path="res://title_screen/titlescreen - frames/house_animated4.png" id="4_uiiip"]
+[ext_resource type="Texture2D" uid="uid://24x26i05won0" path="res://title_screen/titlescreen - frames/house_animated5.png" id="7_u0nof"]
+[ext_resource type="Texture2D" uid="uid://lkfu8ilurray" path="res://title_screen/titlescreen - frames/house_animated6.png" id="8_ilk26"]
+[ext_resource type="Texture2D" uid="uid://cpms2b2fdwdk5" path="res://title_screen/titlescreen - frames/house_animated7.png" id="9_8b01o"]
+[ext_resource type="Texture2D" uid="uid://npeuarifs3te" path="res://title_screen/titlescreen - frames/house_animated8.png" id="10_sybbf"]
+[ext_resource type="Texture2D" uid="uid://belcc5mio8l8f" path="res://title_screen/titlescreen - frames/house_animated9.png" id="11_yfxkr"]
+[ext_resource type="Texture2D" uid="uid://bax6i6idappbv" path="res://title_screen/titlescreen - frames/house_animated10.png" id="12_r5mru"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dxpbd"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(0, 0, 288, 208)
+[sub_resource type="GDScript" id="GDScript_2dq6q"]
+script/source = "extends Control
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2dq6q"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(288, 0, 288, 208)
+func _ready():
+	pass
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vbjqi"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(576, 0, 288, 208)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0m3ch"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(864, 0, 288, 208)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fk0fn"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(1152, 0, 288, 208)
+func _on_start_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://levels/world_01.tscn\")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oqrgu"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(1440, 0, 288, 208)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fv0o7"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(1728, 0, 288, 208)
+func _on_credits_button_pressed() -> void:
+	pass # Replace with function body.
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1oos5"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(2016, 0, 288, 208)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fh6ay"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(2304, 0, 288, 208)
+func _on_shop_button_pressed() -> void:
+	pass # Replace with function body.
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jabur"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(2592, 0, 288, 208)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uiiip"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(2880, 0, 288, 208)
+func _on_options_button_pressed() -> void:
+	pass # Replace with function body.
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p7x7j"]
-atlas = ExtResource("1_g2mvh")
-region = Rect2(3168, 0, 288, 208)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4h7y4"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dxpbd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2dq6q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vbjqi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0m3ch")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fk0fn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oqrgu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fv0o7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1oos5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fh6ay")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jabur")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uiiip")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p7x7j")
-}],
-"loop": true,
-"name": &"main.menu",
-"speed": 5.0
-}]
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()
+"
 
-[node name="Control" type="Control"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_p7x7j"]
+frames = 12
+speed_scale = 5.3
+frame_0/texture = ExtResource("1_1oos5")
+frame_1/texture = ExtResource("2_fh6ay")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_jabur")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_uiiip")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("7_u0nof")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("8_ilk26")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("9_8b01o")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("10_sybbf")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("11_yfxkr")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("12_r5mru")
+frame_9/duration = 1.0
+frame_10/texture = ExtResource("3_3d3o2")
+frame_10/duration = 1.0
+frame_11/texture = ExtResource("4_47vnn")
+frame_11/duration = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vbjqi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0m3ch"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fk0fn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oqrgu"]
+
+[sub_resource type="Animation" id="Animation_0m3ch"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/gametitle:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vbjqi"]
+resource_name = "fade"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/gametitle:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.41),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fk0fn"]
+_data = {
+&"RESET": SubResource("Animation_0m3ch"),
+&"fade": SubResource("Animation_vbjqi")
+}
+
+[node name="titlescreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = SubResource("GDScript_2dq6q")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-texture_repeat = 3
-position = Vector2(413, 200.5)
-scale = Vector2(2.90972, 2.20673)
-sprite_frames = SubResource("SpriteFrames_4h7y4")
-animation = &"main.menu"
-autoplay = "main.menu"
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AnimatedTexture_p7x7j")
+expand_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(162, 80.75)
-scale = Vector2(1.27907, 1.38172)
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="gametitle" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
 texture = ExtResource("2_dxpbd")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="start_button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_vbjqi")
+theme_override_fonts/font = ExtResource("2_2dq6q")
+text = "START"
+
+[node name="separator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_vbjqi")
+
+[node name="credits_button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_vbjqi")
+theme_override_fonts/font = ExtResource("2_2dq6q")
+text = "CREDITS"
+
+[node name="separator2" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_0m3ch")
+
+[node name="shop_button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_vbjqi")
+theme_override_fonts/font = ExtResource("2_2dq6q")
+text = "SHOP"
+
+[node name="separator3" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_fk0fn")
+
+[node name="options_button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_vbjqi")
+theme_override_fonts/font = ExtResource("2_2dq6q")
+text = "OPTIONS"
+
+[node name="separator4" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_oqrgu")
+
+[node name="quit_button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_vbjqi")
+theme_override_fonts/font = ExtResource("2_2dq6q")
+text = "QUIT"
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fk0fn")
+}
+autoplay = "fade"
+
+[connection signal="resized" from="." to="." method="_on_resized"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/credits_button" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/shop_button" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/options_button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]

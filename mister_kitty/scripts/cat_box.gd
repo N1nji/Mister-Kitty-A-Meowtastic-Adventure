@@ -9,11 +9,15 @@ extends CharacterBody2D
 var is_in_area = false
 var is_interacting = false  # Controle de interação
 
+# Inicia o jogo com a animção do catbox parado
 func _ready() -> void:
 	anim.play("idle")
-	
 
-
+func _process(_delta):
+	# Se terminou o diálogo, reseta tudo
+	if is_interacting and !DialogManager.is_message_active:
+		is_interacting = false
+		anim.play("idle")
 
 func _unhandled_input(event):
 	if is_in_area and !is_interacting:
@@ -30,10 +34,7 @@ func _unhandled_input(event):
 					anim.play("interact_finish")
 					is_interacting = false
 
-
-
-
-
+# Animção do catbox ao detectar o player dentro da área
 func _on_area_sign_body_entered(body: Node2D) -> void:
 	anim.play("shake_cat")
 	is_in_area = true
@@ -41,12 +42,20 @@ func _on_area_sign_body_entered(body: Node2D) -> void:
 	label.text = "Pressione 'I' para interagir e 'O' para passar"
 	print("entrou na area")
 
-
+# Animção do catbox fechando quando o player sai da área
 func _on_area_sign_body_exited(body: Node2D) -> void:
 	is_in_area = false
 	label.visible = false
-	if anim.animation == "interact" or anim.animation == "interacting":
-		anim.play("interact_finish")
-	print("saiu da areá ok")
 
-		
+	# Se estava interagindo, interrompe forçadamente
+	if is_interacting:
+		is_interacting = false
+		anim.play("interact_finish")
+
+		# Se tiver uma DialogBox ativa, remove
+		if DialogManager.dialog_box and is_instance_valid(DialogManager.dialog_box):
+			DialogManager.dialog_box.queue_free()
+			DialogManager.dialog_box = null
+			DialogManager.is_message_active = false
+	else:
+		anim.play("idle")

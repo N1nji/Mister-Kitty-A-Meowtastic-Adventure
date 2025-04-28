@@ -1,6 +1,8 @@
 extends Node
 
 @onready var dialog_box_scene = preload("res://prefabs/dialog_box.tscn")
+
+var current_source_node = null
 var message_lines : Array[String] = []
 var current_line = 0
 
@@ -43,23 +45,27 @@ func _on_all_text_displayed():
 	can_advance_message = true
 	
 func _unhandled_input(event):
-	if (event.is_action_pressed("advance_message") or event.is_action_pressed("ui_touch") && is_message_active && can_advance_message):
-		current_line += 1
+	if is_message_active and can_advance_message and current_source_node:
+		if current_source_node.is_inside_tree():
+			if (event.is_action_pressed("advance_message") or event.is_action_pressed("ui_touch") && is_message_active && can_advance_message):
+				current_line += 1
 		if current_line >= message_lines.size():
 			is_message_active = false
-			current_line = 0
+			current_line = 0	
 			if dialog_box and is_instance_valid(dialog_box):
 				dialog_box.call_deferred("queue_free")  # Chama a remoção de forma segura
 				dialog_box = null
+				current_source_node = null
 		else:
 			show_text()	
 		
 
-func _on_area_sign_exited(_body: Node) -> void:
+func _on_area_sign_exited(body: Node) -> void:
 	if is_message_active:
 		is_message_active = false
 		current_line = 0
 		can_advance_message = false
+		current_source_node = null
 		if dialog_box and is_instance_valid(dialog_box):
 			dialog_box.call_deferred("queue_free")
 			dialog_box = null

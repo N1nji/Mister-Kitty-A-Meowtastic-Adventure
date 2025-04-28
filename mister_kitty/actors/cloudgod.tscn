@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6p3u60r6dfw8"]
+
+[ext_resource type="Texture2D" uid="uid://beets8mdluasw" path="res://assets/Sprite Pack 2/Sprite Pack 2/Cloud Dog/cloud_dog.png" id="1_i34q5"]
+
+[node name="cloudgod" type="CharacterBody2D"]
+
+[node name="texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_i34q5")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+
+[node name="anim" type="AnimationPlayer" parent="."]
+
+[node name="detector" type="RayCast2D" parent="."]
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="hitbox"]

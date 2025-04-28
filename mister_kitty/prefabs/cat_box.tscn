@@ -439,13 +439,11 @@ script = ExtResource("1_vm0lr")
 
 [node name="anim_cat" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_txjs4")
-animation = &"interact"
-frame = 22
-frame_progress = 0.220889
+animation = &"shake_cat"
 
 [node name="area_sign" type="Area2D" parent="."]
 position = Vector2(-1, -19)
-collision_layer = 2
+collision_layer = 128
 
 [node name="collision" type="CollisionShape2D" parent="area_sign"]
 position = Vector2(1, 16)

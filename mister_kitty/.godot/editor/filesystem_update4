@@ -1,5 +1,8 @@
-res://shaders/movements_clouds.gdshader
 res://levels/world_01.tscn
+res://shaders/movements_clouds.gdshader
+res://shaders/cloudsweet.gdshader
+res://shaders/cloudbig.gdshader
+res://title_screen/default_buttons.tres
 res://actors/mister_kitty.tscn
 res://prefabs/moving_platform.tscn
 res://prefabs/coin.tscn
@@ -14,3 +17,6 @@ res://prefabs/coin_no_shadow.tscn
 res://prefabs/sun.tscn
 res://dialog_screen/dialog_screen.tscn
 res://title_screen/title_screen.tscn
+res://cloud sweet/cloud.tscn
+res://cloud sweet/cloudbig.tscn
+res://actors/cloudgod.tscn

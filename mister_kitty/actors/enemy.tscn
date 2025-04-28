@@ -7,9 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cef1rrf2v2h5l" path="res://assets/Sprite Pack 2/Sprite Pack 2/Wolf/new_wolf_walk.png" id="5_kho5t"]
 [ext_resource type="Texture2D" uid="uid://d34rhlqbevthj" path="res://assets/Sprite Pack 2/Sprite Pack 2/Wolf/new_wolf_morte.png" id="6_kho5t"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_47v8y"]
-radius = 9.0
-height = 18.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dpeei"]
+size = Vector2(20, 15)
 
 [sub_resource type="Animation" id="Animation_6tp0m"]
 resource_name = "death"
@@ -198,8 +197,8 @@ flip_h = true
 hframes = 4
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(6, 15)
-shape = SubResource("CapsuleShape2D_47v8y")
+position = Vector2(6, 13)
+shape = SubResource("RectangleShape2D_dpeei")
 
 [node name="anim" type="AnimationPlayer" parent="."]
 libraries = {
@@ -211,7 +210,7 @@ speed_scale = 0.3
 [node name="wall_detector" type="RayCast2D" parent="."]
 position = Vector2(1, 10)
 target_position = Vector2(-21, 0)
-collision_mask = 6
+collision_mask = 2
 collide_with_areas = true
 
 [node name="hitbox" parent="." instance=ExtResource("4_ie2ic")]
@@ -219,7 +218,7 @@ position = Vector2(0, 3)
 collision_layer = 17
 
 [node name="collision2" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(6.39064, 4)
+position = Vector2(6, 2)
 shape = SubResource("RectangleShape2D_w224w")
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

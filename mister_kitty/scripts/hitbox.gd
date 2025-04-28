@@ -5,7 +5,7 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "mister_kitty":
-		body.velocity.y = body.JUMP_FORCE
+		body.velocity.y = -body.jump_velocity
 		owner.anim.play("hurt")
 		await anim.animation_finished
 		anim.play("walk")

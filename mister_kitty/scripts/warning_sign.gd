@@ -21,10 +21,11 @@ func _unhandled_input(event):
 			texture.hide()
 			is_interacting = true
 			if !DialogManager.is_message_active:
+				DialogManager.current_source_node = self
 				DialogManager.start_message(global_position, lines)
 				
-			else:
-				DialogManager._unhandled_input(event)  # 🔹 Chama direto para forçar a passagem de diálogo
+			#else:
+				#DialogManager._unhandled_input(event)  # 🔹 Chama direto para forçar a passagem de diálogo
 				
 						
 	else:
@@ -36,3 +37,16 @@ func _unhandled_input(event):
 func _process(_delta):
 	if is_interacting and !DialogManager.is_message_active:
 		is_interacting = false  # Reseta para permitir novas interações
+	
+
+
+func _on_area_sign_body_exited(body: Node2D) -> void:
+	can_advance_message = false
+	is_interacting = false
+
+	if DialogManager.dialog_box and is_instance_valid(DialogManager.dialog_box):
+		DialogManager.dialog_box.queue_free()
+		DialogManager.dialog_box = null
+
+	DialogManager.is_message_active = false
+	
