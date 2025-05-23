@@ -29,9 +29,9 @@ Sua dona, uma doce e idosa amante de gatos, está esperando por você, mas muita
 
 ## 📜 Autores
 
-Criado por [N1nji] - [https://www.linkedin.com/in/pedro-felipe-9b97b315b/] & [https://www.tiktok.com/@mr.kitty_game]
+Criado por [N1nji] - [https://www.linkedin.com/in/pedrofelipe-n1/] & [https://www.tiktok.com/@mr.kitty_game]
 
-Designer por [Sh1zi] - [https://www.tiktok.com/@kootyoder].
+Designer por [Sh1zi] - [https://x.com/Str4nnyy] & [https://www.tiktok.com/@kootyoder]
 
 ## 🔜 Contribuindo
 
