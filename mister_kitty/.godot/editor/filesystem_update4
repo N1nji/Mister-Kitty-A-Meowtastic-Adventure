@@ -19,4 +19,5 @@ res://dialog_screen/dialog_screen.tscn
 res://title_screen/title_screen.tscn
 res://cloud sweet/cloud.tscn
 res://cloud sweet/cloudbig.tscn
-res://actors/cloudgod.tscn
+res://dialog_screen/npc.tscn
+res://ecs/entities/clouddog.tscn

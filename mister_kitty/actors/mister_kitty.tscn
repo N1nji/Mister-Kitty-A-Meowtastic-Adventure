@@ -331,10 +331,8 @@ script = ExtResource("1_qir5i")
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_rx73c")
-animation = &"death"
+animation = &"idle"
 autoplay = "idle"
-frame = 10
-frame_progress = 1.0
 
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, -1)

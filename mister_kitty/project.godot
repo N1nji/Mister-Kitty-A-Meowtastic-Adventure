@@ -21,6 +21,7 @@ config/emulate_touch_from_mouse=false
 
 DialogManager="*res://singletons/dialog_manager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Ecs="*res://ecs/ECS.gd"
 
 [dialogic]
 
@@ -37,7 +38,11 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/script-ide/plugin.cfg")
+
+[global_group]
+
+Enemies=""
 
 [input]
 

@@ -45,9 +45,13 @@ func _on_all_text_displayed():
 	can_advance_message = true
 	
 func _unhandled_input(event):
-	if is_message_active and can_advance_message and current_source_node:
-		if current_source_node.is_inside_tree():
-			if (event.is_action_pressed("advance_message") or event.is_action_pressed("ui_touch") && is_message_active && can_advance_message):
+	if not is_message_active or not can_advance_message: 
+		return
+		
+	if event.is_action_pressed("advance_message") or event.is_action_pressed("ui_touch"):
+		print("chamando2")
+		if is_message_active and can_advance_message and current_source_node:
+			if current_source_node.is_inside_tree():
 				current_line += 1
 		if current_line >= message_lines.size():
 			is_message_active = false

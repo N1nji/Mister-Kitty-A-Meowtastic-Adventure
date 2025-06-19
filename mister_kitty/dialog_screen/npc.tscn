@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx1ce5sawji81"]
+
+[ext_resource type="Script" uid="uid://d2dhh1segs4ch" path="res://dialog_screen/npc's.gd" id="1_1lluj"]
+[ext_resource type="PackedScene" uid="uid://dsmbcry8hrolp" path="res://dialog_screen/dialog_screen.tscn" id="2_q4233"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64spx"]
+size = Vector2(32, 32)
+
+[node name="NPC" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_1lluj")
+dialog_screen = ExtResource("2_q4233")
+
+[node name="texture" type="TextureRect" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_64spx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

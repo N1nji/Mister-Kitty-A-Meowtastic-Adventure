@@ -1,0 +1,198 @@
+[gd_scene load_steps=15 format=3 uid="uid://fmnthtrhomhe"]
+
+[ext_resource type="Texture2D" uid="uid://beets8mdluasw" path="res://assets/Sprite Pack 2/Sprite Pack 2/Cloud Dog/cloud_dog.png" id="1_bu1qi"]
+[ext_resource type="Script" uid="uid://j5oatodbva3b" path="res://ecs/entities/clouddog.gd" id="1_sa6r7"]
+[ext_resource type="Script" uid="uid://bhx7eg1ftpp4l" path="res://ecs/components/ai.gd" id="2_sa6r7"]
+[ext_resource type="Script" uid="uid://f3kktwmau0g6" path="res://ecs/components/movement.gd" id="3_6c8le"]
+[ext_resource type="Texture2D" uid="uid://bs6t4lpcd8cqr" path="res://assets/Sprite Pack 2/Sprite Pack 2/Cloud Dog/cloud_dog_dead.png" id="3_v87vo"]
+[ext_resource type="Script" uid="uid://cptphty1e4qho" path="res://ecs/components/health.gd" id="4_v87vo"]
+
+[sub_resource type="Animation" id="Animation_kjcp2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_bu1qi")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texture:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_asun4"]
+resource_name = "chase"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_bu1qi")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texture:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_l1a5k"]
+resource_name = "death"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_v87vo")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texture:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 8]
+}
+
+[sub_resource type="Animation" id="Animation_6hy2w"]
+resource_name = "idle"
+
+[sub_resource type="Animation" id="Animation_6j0af"]
+resource_name = "patrol"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f2pu8"]
+_data = {
+&"RESET": SubResource("Animation_kjcp2"),
+&"chase": SubResource("Animation_asun4"),
+&"death": SubResource("Animation_l1a5k"),
+&"idle": SubResource("Animation_6hy2w"),
+&"patrol": SubResource("Animation_6j0af")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kjcp2"]
+radius = 12.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa6r7"]
+size = Vector2(20, 8)
+
+[node name="clouddog" type="CharacterBody2D" groups=["Enemies"]]
+position = Vector2(-4, -24)
+collision_layer = 4
+collision_mask = 34
+script = ExtResource("1_sa6r7")
+
+[node name="texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_bu1qi")
+hframes = 5
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_f2pu8")
+}
+autoplay = "chase"
+speed_scale = 0.228
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(2, 12)
+shape = SubResource("CircleShape2D_kjcp2")
+
+[node name="AIComponent" type="Node" parent="."]
+script = ExtResource("2_sa6r7")
+
+[node name="MovementComponent" type="Node" parent="."]
+script = ExtResource("3_6c8le")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("4_v87vo")
+
+[node name="AnimationSystem" type="Node" parent="."]
+
+[node name="detector" type="RayCast2D" parent="."]
+position = Vector2(-17, 1)
+target_position = Vector2(0, 30)
+collision_mask = 2
+
+[node name="detector2" type="RayCast2D" parent="."]
+position = Vector2(17, 1)
+target_position = Vector2(0, 30)
+collision_mask = 2
+
+[node name="area" type="Area2D" parent="."]
+collision_layer = 17
+
+[node name="hitbox" type="CollisionShape2D" parent="area"]
+position = Vector2(6, 0)
+shape = SubResource("RectangleShape2D_sa6r7")
+debug_color = Color(0.979932, 0, 0.383933, 0.42)

@@ -1,11 +1,11 @@
-res://actors/enemy.tscn::bb56bca92ac7eb6e45edb05a4ef7ddd0::1745418777::res://.godot/exported/133200997/export-61e27e8a0642b62a00179865da5b591c-enemy.scn
-res://actors/mister_kitty.tscn::190de9e8fb1bc9d3599382eaeb40e288::1745418777::res://.godot/exported/133200997/export-a80b7716e63c63b3afbc8b369599cce2-mister_kitty.scn
-res://levels/world_01.tscn::0c5403f4c4a84393bb2ee6a0624dd814::1745418776::res://.godot/exported/133200997/export-bde9b0b2529c5f41f8c8416b7a30fd64-world_01.scn
-res://prefabs/box_pieces.tscn::d70d37738cdd7ca9e3c678ded6cbd3e5::1745418778::res://.godot/exported/133200997/export-d088e30657af1788143c74091958b18d-box_pieces.scn
-res://prefabs/break_box.tscn::889afc0e67c4f97b0443e36b4bf15b32::1745418777::res://.godot/exported/133200997/export-2f9be4c863036b3a1d8f6a066dbc3422-break_box.scn
-res://prefabs/coin.tscn::8de42d339fc74e9649654642ce136cc4::1745418777::res://.godot/exported/133200997/export-39bbc9b86d6ff472dbd608d74c2b3efc-coin.scn
+res://actors/enemy.tscn::dfadf433d832f025485cc06d640f8053::1749434503::res://.godot/exported/133200997/export-61e27e8a0642b62a00179865da5b591c-enemy.scn
+res://actors/mister_kitty.tscn::686b1afa32b6a031ba5e70ca7b0ef03d::1749434502::res://.godot/exported/133200997/export-a80b7716e63c63b3afbc8b369599cce2-mister_kitty.scn
+res://levels/world_01.tscn::84f8a570278919319b57e3a9fa6a6683::1749434502::res://.godot/exported/133200997/export-bde9b0b2529c5f41f8c8416b7a30fd64-world_01.scn
+res://prefabs/box_pieces.tscn::d70d37738cdd7ca9e3c678ded6cbd3e5::1749434503::res://.godot/exported/133200997/export-d088e30657af1788143c74091958b18d-box_pieces.scn
+res://prefabs/break_box.tscn::889afc0e67c4f97b0443e36b4bf15b32::1749434503::res://.godot/exported/133200997/export-2f9be4c863036b3a1d8f6a066dbc3422-break_box.scn
+res://prefabs/coin.tscn::8de42d339fc74e9649654642ce136cc4::1749434503::res://.godot/exported/133200997/export-39bbc9b86d6ff472dbd608d74c2b3efc-coin.scn
 res://prefabs/hitbox.tscn::90055db7802418b7b1883351755e4ba7::1742912462::res://.godot/exported/133200997/export-5e61a6088dbfe8a801584a03fb1f0aa8-hitbox.scn
-res://prefabs/moving_platform.tscn::003ebf640d3c7cda541c8f5e455daa95::1745418777::res://.godot/exported/133200997/export-b8b4dc3182f88a6c2aaba450ed03da50-moving_platform.scn
+res://prefabs/moving_platform.tscn::003ebf640d3c7cda541c8f5e455daa95::1749434502::res://.godot/exported/133200997/export-b8b4dc3182f88a6c2aaba450ed03da50-moving_platform.scn
 res://addons/dialogic/Editor/CharacterEditor/character_editor.tscn::e0faafdc5d89e1e513ea60e99c980920::1742912461::res://.godot/exported/133200997/export-f10ca221dec948b138547765d86a2f59-character_editor.scn
 res://addons/dialogic/Editor/CharacterEditor/character_prefix_suffix.tscn::47fa1ce05f57873174196b608f5eded9::1742912461::res://.godot/exported/133200997/export-362800c20039f986070190c406fbcf0e-character_prefix_suffix.scn
 res://addons/dialogic/Editor/CharacterEditor/char_edit_p_section_exports.tscn::5230a62b06e304b6aa20a1ad5c5b08a8::1742912461::res://.godot/exported/133200997/export-4edef71f8fd21f0c7e3557f5dd3d504c-char_edit_p_section_exports.scn
@@ -114,17 +114,21 @@ res://addons/dialogic/Modules/Text/character_settings/character_moods_settings.t
 res://addons/dialogic/Modules/Text/character_settings/character_portrait_mood_settings.tscn::84f1116a21f722c4b5d3e1371cd89877::1742912462::res://.godot/exported/133200997/export-37c35566857061453231ad11bc175413-character_portrait_mood_settings.scn
 res://addons/dialogic/Modules/Text/settings_text.tscn::a576f267a411b6f4cca1e1d0e82311ec::1742912462::res://.godot/exported/133200997/export-67100a9f8a5726886cf8dbc525c7a035-settings_text.scn
 res://addons/dialogic/Modules/Variable/variables_editor/variables_editor.tscn::aa77d16851009e63a66ad55aac5d1954::1742912462::res://.godot/exported/133200997/export-81d6117e9fbfcc345d9d0dd8f77e3c55-variables_editor.scn
-res://dialog_screen/dialog_screen.tscn::be163e1023f4140d16705450f513a3b4::1745418778::res://.godot/exported/133200997/export-46cf1e87bf41af27395b72d307242788-dialog_screen.scn
+res://dialog_screen/dialog_screen.tscn::be163e1023f4140d16705450f513a3b4::1749434504::res://.godot/exported/133200997/export-46cf1e87bf41af27395b72d307242788-dialog_screen.scn
 res://prefabs/break_box_rigid.tscn::f5c2a8b95396fe8d5623d5fb1c2cfddd::1742067899::res://.godot/exported/133200997/export-160dea0496810853e41e0e60ae2dc2a8-break_box_rigid.scn
-res://prefabs/cat_box.tscn::ae4c4118b448297ff227f0adbfb5868b::1745418778::res://.godot/exported/133200997/export-2f8420f81ba0927bc5801da16eb55c74-cat_box.scn
-res://prefabs/coin_no_shadow.tscn::4c68ade728f1e717ae5445d7c958a997::1745418778::res://.godot/exported/133200997/export-d1a29f48c323d954114312b2ea3df16b-coin_no_shadow.scn
-res://prefabs/coin_rigid.tscn::4d93269f7d198f93d16eaca2c0332d63::1745418777::res://.godot/exported/133200997/export-25babce883a7bfbac2a281dc364fbf4f-coin_rigid.scn
-res://prefabs/dialog_box.tscn::e6064761eaade55560150da250875ef8::1745418778::res://.godot/exported/133200997/export-67c1f312581d8577e5e9c471a97f3310-dialog_box.scn
-res://prefabs/falling_platform.tscn::89e55bd777830e3235288ba856adc800::1745418778::res://.godot/exported/133200997/export-ed611ab095895c21c38dd5bf5ce80c05-falling_platform.scn
-res://prefabs/sun.tscn::dcb19628c0bdd2721758720beeed886f::1745418778::res://.godot/exported/133200997/export-9e976b3a85f089fa5e47b4cf2f3ed614-sun.scn
+res://prefabs/cat_box.tscn::cf4910fd6a72af0fdc4a556e1594aa75::1749434503::res://.godot/exported/133200997/export-2f8420f81ba0927bc5801da16eb55c74-cat_box.scn
+res://prefabs/coin_no_shadow.tscn::4c68ade728f1e717ae5445d7c958a997::1749434503::res://.godot/exported/133200997/export-d1a29f48c323d954114312b2ea3df16b-coin_no_shadow.scn
+res://prefabs/coin_rigid.tscn::4d93269f7d198f93d16eaca2c0332d63::1749434503::res://.godot/exported/133200997/export-25babce883a7bfbac2a281dc364fbf4f-coin_rigid.scn
+res://prefabs/dialog_box.tscn::e6064761eaade55560150da250875ef8::1749434503::res://.godot/exported/133200997/export-67c1f312581d8577e5e9c471a97f3310-dialog_box.scn
+res://prefabs/falling_platform.tscn::89e55bd777830e3235288ba856adc800::1749434503::res://.godot/exported/133200997/export-ed611ab095895c21c38dd5bf5ce80c05-falling_platform.scn
+res://prefabs/sun.tscn::dcb19628c0bdd2721758720beeed886f::1749434504::res://.godot/exported/133200997/export-9e976b3a85f089fa5e47b4cf2f3ed614-sun.scn
 res://title_screen/bg.tscn::ab915776644a0014d88107eac1682d82::1744507831::res://.godot/exported/133200997/export-46a708f1fe92b29753ade5ddbd5b1dee-bg.scn
-res://title_screen/default_buttons.tres::a6d4ce24e60dcb73af1948e0cc8843d1::1745418777::res://.godot/exported/133200997/export-f36e8bea234f9d613e625aaabe9459ee-default_buttons.res
-res://title_screen/title_screen.tscn::600fac64310e62e0b996f66ee6dac43c::1745418778::res://.godot/exported/133200997/export-7f288f9d8c0f823a74159dfe7cf7750d-title_screen.scn
-res://actors/cloudgod.tscn::9ff0c19b0a98112a4b71409f64a56015::1745418779::res://.godot/exported/133200997/export-cd1caa36765e841975297578c2426098-cloudgod.scn
-res://cloud sweet/cloud.tscn::faa6e70115aeae4a74b39c69da039853::1745418779::res://.godot/exported/133200997/export-2a9a7210c9e2a588ed2cc3ae9f1fe490-cloud.scn
-res://cloud sweet/cloudbig.tscn::d6e8cb732d255ba2b469e1e467ab9cfe::1745418779::res://.godot/exported/133200997/export-577b8577d128655e2882b647d6993db3-cloudbig.scn
+res://title_screen/default_buttons.tres::a6d4ce24e60dcb73af1948e0cc8843d1::1749407448::res://.godot/exported/133200997/export-f36e8bea234f9d613e625aaabe9459ee-default_buttons.res
+res://title_screen/title_screen.tscn::6d993efba354146b215950fe2e571b6d::1749434504::res://.godot/exported/133200997/export-7f288f9d8c0f823a74159dfe7cf7750d-title_screen.scn
+res://actors/cloudgod.tscn::9ff0c19b0a98112a4b71409f64a56015::1748646117::res://.godot/exported/133200997/export-cd1caa36765e841975297578c2426098-cloudgod.scn
+res://cloud sweet/cloud.tscn::be443f3a6c8b6a7cb1e4abecf22198d4::1749434504::res://.godot/exported/133200997/export-2a9a7210c9e2a588ed2cc3ae9f1fe490-cloud.scn
+res://cloud sweet/cloudbig.tscn::d6e8cb732d255ba2b469e1e467ab9cfe::1749434504::res://.godot/exported/133200997/export-577b8577d128655e2882b647d6993db3-cloudbig.scn
+res://addons/script-ide/override/override_panel.tscn::2d4b920acfb6221901c1bee4b27051e0::1749323597::res://.godot/exported/133200997/export-3c242377f220d5efa6515391e37728a4-override_panel.scn
+res://addons/script-ide/quickopen/quick_open_panel.tscn::46deff443e5493257ba00def044bef01::1749323598::res://.godot/exported/133200997/export-ea4449fb1405d231526112789002da2b-quick_open_panel.scn
+res://dialog_screen/npc.tscn::da265e74a0113835bf3da0b0073ad05a::1749434504::res://.godot/exported/133200997/export-3319d17a097a445251b03d2dd0acc970-npc.scn
+res://ecs/entities/clouddog.tscn::620d117251e59b74792ae2df1ef06fe7::1749434504::res://.godot/exported/133200997/export-83742514a8c6cf12b8b306f2e10e921f-clouddog.scn

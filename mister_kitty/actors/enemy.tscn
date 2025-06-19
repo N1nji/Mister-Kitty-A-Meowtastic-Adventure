@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://udhd3togk37m"]
+[gd_scene load_steps=17 format=3 uid="uid://udhd3togk37m"]
 
 [ext_resource type="Script" uid="uid://0hjfyw1qcc8s" path="res://scripts/enemy.gd" id="1_q0ct1"]
 [ext_resource type="Texture2D" uid="uid://dcfrkl8mucgj0" path="res://assets/Sprite Pack 2/Sprite Pack 2/Wolf/new_wolf_dano.png" id="3_6tp0m"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bb2edu262on2c" path="res://prefabs/hitbox.tscn" id="4_ie2ic"]
 [ext_resource type="Texture2D" uid="uid://cef1rrf2v2h5l" path="res://assets/Sprite Pack 2/Sprite Pack 2/Wolf/new_wolf_walk.png" id="5_kho5t"]
 [ext_resource type="Texture2D" uid="uid://d34rhlqbevthj" path="res://assets/Sprite Pack 2/Sprite Pack 2/Wolf/new_wolf_morte.png" id="6_kho5t"]
+[ext_resource type="Script" uid="uid://bhx7eg1ftpp4l" path="res://ecs/components/ai.gd" id="7_5yufn"]
+[ext_resource type="Script" uid="uid://cptphty1e4qho" path="res://ecs/components/health.gd" id="8_tgi3b"]
+[ext_resource type="Script" uid="uid://f3kktwmau0g6" path="res://ecs/components/movement.gd" id="9_uw8wr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dpeei"]
 size = Vector2(20, 15)
@@ -192,7 +195,7 @@ script = ExtResource("1_q0ct1")
 
 [node name="texture" type="Sprite2D" parent="."]
 position = Vector2(6, 6)
-texture = ExtResource("5_kho5t")
+texture = ExtResource("6_kho5t")
 flip_h = true
 hframes = 4
 
@@ -220,5 +223,14 @@ collision_layer = 17
 [node name="collision2" type="CollisionShape2D" parent="hitbox"]
 position = Vector2(6, 2)
 shape = SubResource("RectangleShape2D_w224w")
+
+[node name="AIComponent" type="Node" parent="."]
+script = ExtResource("7_5yufn")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("8_tgi3b")
+
+[node name="MovementComponent" type="Node" parent="."]
+script = ExtResource("9_uw8wr")
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
