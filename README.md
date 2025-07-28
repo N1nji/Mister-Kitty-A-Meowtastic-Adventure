@@ -1,10 +1,10 @@
-# Mr. Kitty 🐾
+# Mister Kitty 🐾
 
 ![Game Status](https://img.shields.io/badge/status-active-brightgreen)  ![Godot version](https://img.shields.io/badge/engine-Godot%204.4-blue)
 
 ## Em Desenvolvimento - In Development
 
-**Mr. Kitty** é um jogo onde você controla um gatinho perdido em sua jornada para voltar para casa. 
+**Mister Kitty** é um jogo onde você controla um gatinho perdido em sua jornada para voltar para casa. 
 Em meio a muitos desafios e aventuras, você vai ajudar nosso protagonista a superar obstáculos enquanto enfrenta inimigos e se aproxima do seu destino final: o lar da sua dona, uma idosa louca por gatos!
 
 ## 🎮 Como Jogar
