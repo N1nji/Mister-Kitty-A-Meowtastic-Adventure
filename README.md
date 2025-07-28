@@ -14,7 +14,7 @@ Em meio a muitos desafios e aventuras, você vai ajudar nosso protagonista a sup
   - Teclado:
     - Setas para mover
     - Espaço para pular
-    - Tecla de ação para interagir: I, O
+    - Tecla de ação para interagir: E
   - Mobile:
     - Botões virtuais para se mover para esquerda, direita e pular e toque para interagir
 
