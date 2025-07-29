@@ -34,10 +34,21 @@ Sua dona, uma doce e idosa amante de gatos, está esperando por você, mas muita
 
 ## 📜 Autores
 
-Desenvolvedor por [N1nji]:
-![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedrofelipe-n1/)
+Desenvolvedor por [N1nji]: </br> **Redes Sociais:** </br> 
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedrofelipe-n1/)
+[![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://x.com/n1njimilanesa)
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/@n1njii)
+[![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?style=for-the-badge&logo=Twitch&logoColor=white)](https://www.twitch.tv/n1nnji)
 
-Designer por [Sh1zi] - [https://x.com/Str4nnyy] & [https://www.tiktok.com/@kootyoder]
+Designer por [Sh1zi]: </br> **Redes Sociais:** </br> 
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emis-mendes-1b1a9b370/)
+[![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://x.com/Str4nnyy)
+[![TikTok](https://img.shields.io/badge/TikTok-%23000000.svg?style=for-the-badge&logo=TikTok&logoColor=white)](https://www.tiktok.com/@kootyoder)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=firefox&logoColor=#FF7139)](https://portfolio-sh1zi.vercel.app/)
+
+
+
+
 
 ## 🔜 Contribuindo
 
